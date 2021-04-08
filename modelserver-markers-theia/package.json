@@ -1,5 +1,5 @@
 {
-  "name": "@eclipse-emfcloud/modelserver-theia",
+  "name": "@eclipse-emfcloud/modelserver-markers-theia",
   "license": "(EPL-2.0 OR MIT)",
   "publishConfig": {
     "access": "public"
@@ -8,7 +8,6 @@
   "keywords": [
     "theia-extension",
     "model-server",
-    "EMF",
     "modeling"
   ],
   "homepage": "https://www.eclipse.org/emfcloud/",
@@ -19,19 +18,16 @@
     "src"
   ],
   "author": {
-    "name": "EclipseSource"
+    "name": "Vincent HEMERY (CS GROUP - France)",
+    "email": "vincent.hemery@csgroup.eu"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/eclipse-emfcloud/emfcloud-modelserver-theia.git"
   },
   "dependencies": {
-    "@theia/core": "^1.0.0",
-    "@theia/process": "^1.0.0",
-    "@theia/workspace": "^1.0.0",
-    "@types/node-fetch": "2.5.7",
-    "node-fetch": "2.6.1",
-    "ws": "7.1.1"
+    "@theia/markers": "^1.0.0",
+    "@eclipse-emfcloud/modelserver-theia": "0.7.0"
   },
   "scripts": {
     "prepare": "yarn run clean && yarn run build",
@@ -42,8 +38,7 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/frontend-module",
-      "backend": "lib/node/backend-module"
+      "frontend": "lib/browser/frontend-module"
     }
   ]
 }
